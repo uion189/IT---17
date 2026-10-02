@@ -32,9 +32,7 @@
 # print(f"Слів: {words}")
 
 # 2
-# input_string = input()
-#
-# parts = input_string.split()
+# parts = input().split()
 #
 # first = parts[0].capitalize()
 # second = parts[1][0].upper()
@@ -56,17 +54,28 @@
 # else:
 #     print("Результат: Рядки НЕ є анаграмами")
 
-# 4
+# # 4
 # words = input().split()
 #
-# u_words = set(word.lower() for word in words)
+# u_words = []
+# for word in words:
+#     lower_word = word.lower()
+#     if lower_word not in u_words:
+#         u_words.append(lower_word)
 # count_u = len(u_words)
 #
 # max_len = max(len(word) for word in words)
 # min_len = min(len(word) for word in words)
 #
-# longest_words = list(set(word for word in words if len(word) == max_len))
-# shortest_words = list(set(word for word in words if len(word) == min_len))
+# longest_words = []
+# for word in words:
+#     if len(word) == max_len and word not in longest_words:
+#         longest_words.append(word)
+#
+# shortest_words = []
+# for word in words:
+#     if len(word) == min_len and word not in shortest_words:
+#         shortest_words.append(word)
 #
 # print(f"Унікальних слів: {count_u}")
 # print(f"Найдовші: {', '.join(longest_words)}")
